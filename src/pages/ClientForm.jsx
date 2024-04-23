@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom"
-import { apiTest, apiPriseRdv } from "../services/Api"
+import { apiPriseRdv } from "../services/Api"
 import { Link } from "react-router-dom"
 import '../assets/css/components/ClientForm.css'
 
@@ -45,10 +45,6 @@ function ClientForm() {
         }
     }
 
-    useEffect(() => {
-        apiTest()
-    })
-    
     return (
         <>
         <div className="clientForm">
