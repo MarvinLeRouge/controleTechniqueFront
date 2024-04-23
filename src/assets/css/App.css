@@ -1,0 +1,17 @@
+html, body, #root, .app_wrapper {
+    min-height: 100vh
+}
+#root {
+    display: block;;
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+.app_wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+.main_content {
+    padding: 0 5%
+}

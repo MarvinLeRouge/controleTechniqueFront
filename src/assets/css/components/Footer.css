@@ -1,0 +1,7 @@
+.main_footer__nav__list {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+    color: #fff;
+
+}
