@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom"
-import { apiPriseRdv } from "../services/Api"
+import { apiTest, apiPriseRdv } from "../services/Api"
 import { Link } from "react-router-dom"
 import '../assets/css/components/ClientForm.css'
 
@@ -14,7 +14,6 @@ function ClientForm() {
         marque: "", modele: "", 
         immatriculation: "", cgv: 1,
         rdvDate: rdvDate, rdvHour: rdvHour});    
-    console.log("rdvDate", rdvDate, "rdvHour", rdvHour)
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -23,34 +22,32 @@ function ClientForm() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        alert(`${formData.telephone}`);
         apiPriseRdv(formData).then((data) => {
-            console.log("apiPriseRdv", data)
             setFormStatus(data["status"])
         })
     };
 
     function ClientFormStatus({formStatus}) {
-        console.log("composant ClientFormStatus")
         if(formStatus == "ok") {
-            console.log("formStatus ok")
             return (
                 <div className="clientForm__status ok"><p className="clientForm__status__msg">Votre rendez-vous a bien été enregistré.<br />Une confirmation vous a été envoyée par e-mail.<br /><Link className="clientForm__status__link" to="/">Retour à l'accueil</Link></p></div>
             )
         }
         else if(formStatus == "pb") {
-            console.log("formStatus pb")
             return (
                 <div className="clientForm__status ok"><p className="clientForm__status__msg">Votre rendez-vous n'a pas pu être enregistré.<br />Le créneau a été pris entretemps.<br /><Link className="clientForm__status__link" to="/">Retour à l'accueil</Link></p></div>
             )
         }
         else {
-            console.log("formStatus default")
             return (
                 <></>
             )
         }
     }
+
+    useEffect(() => {
+        apiTest()
+    })
     
     return (
         <>

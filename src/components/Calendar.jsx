@@ -23,11 +23,9 @@ function Calendar({nbJours}) {
         Promise.all([
             apiHoraires().then((data) => {
             horaires = data.data
-            console.log("apiHoraires", horaires)
             }),
             apiSyntheseRdvs().then((data) => {
                 synthese = data.data
-                console.log("apiSyntheseRdvs", synthese)
             })
         ]).then(() => {
             let today = dayjs()

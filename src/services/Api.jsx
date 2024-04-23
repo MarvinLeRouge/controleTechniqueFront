@@ -1,11 +1,9 @@
 export async function apiHoraires() {
-    let url = 'http://localhost:8000/api/v1/static/horaires'
+    console.log("apiHoraires")
+    let url = process.env.CTRDV_API_URL + '/static/horaires'
     try {
         const reqInfos = new Request(url,  {method: "get"})
         const req = await fetch(reqInfos)
-
-        console.log("REQUEST", req)
-
         const result = await req.json()
         return result
     }
@@ -16,7 +14,8 @@ export async function apiHoraires() {
 }
 
 export async function apiSyntheseRdvs() {
-    let url = 'http://localhost:8000/api/v1/rdv/synthese'
+    console.log("apiSyntheseRdvs")
+    let url = process.env.CTRDV_API_URL + '/rdv/synthese'
     try {
         const reqInfos = new Request(url,  {method: "get"})
         const req = await fetch(reqInfos)
@@ -31,10 +30,11 @@ export async function apiSyntheseRdvs() {
 }
 
 export async function apiPriseRdv(formData) {
-    let urlClient = 'http://localhost:8000/api/v1/client'
-    let urlTruck = 'http://localhost:8000/api/v1/truck'
-    let urlBridge = 'http://localhost:8000/api/v1/bridge/firstAvailable'
-    let urlRdv = 'http://localhost:8000/api/v1/rdv'
+    console.log("apiPriseRdv")
+    let urlClient = process.env.CTRDV_API_URL + '/client'
+    let urlTruck = process.env.CTRDV_API_URL + '/truck'
+    let urlBridge = process.env.CTRDV_API_URL + '/bridge/firstAvailable'
+    let urlRdv = process.env.CTRDV_API_URL + '/rdv'
     let result = {
         "status": "pb",
     }

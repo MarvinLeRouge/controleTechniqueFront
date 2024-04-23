@@ -18,14 +18,11 @@ function CalendarDay({calendarDayData}) {
     let horaires = null
     let synthese = null
 
-    console.log("CalendarDay", calendarDayData)
     useEffect(() => {
-        console.log("calendarDayData", calendarDayData)
         let calendarHeader = (calendarDayData["calendarHeader"])
         setDayOfWeek(calendarHeader["dayOfWeek"])
         setDayOfMonth(calendarHeader["dayOfMonth"])
         setMonthName(calendarHeader["monthName"])
-        console.log("dayOfWeek", calendarHeader["dayOfWeek"])
         let horaires = (calendarDayData["horaires"])
         let synthese = (calendarDayData["synthese"])
 
@@ -33,9 +30,7 @@ function CalendarDay({calendarDayData}) {
         let hourStop = null
         let hourStartMin = 18
         let hourStopMax = 8
-        console.log("horaires", horaires)
         calendarDayData["horaires"].map((horairesThisDay) => {
-            console.log("horairesThisDay", horairesThisDay)
             if(horairesThisDay["jour"] == calendarHeader["dayOfWeek"]) {
                 hourStart = horairesThisDay["start"]
                 hourStop = horairesThisDay["stop"]
@@ -46,9 +41,7 @@ function CalendarDay({calendarDayData}) {
             if(horairesThisDay["stop"] != null) {
                 hourStopMax = Math.max(hourStopMax, horairesThisDay["stop"])
             }
-            console.log("dayOfWeek", calendarHeader["dayOfWeek"], "hourStartMin", hourStartMin, "hourStart", hourStart, "hourStop", hourStop, "hourStopMax", hourStopMax)
         })
-        console.log("hourStartMin", hourStartMin, "hourStart", hourStart, "hourStop", hourStop, "hourStopMax", hourStopMax)
         let allData = []
 
         for(let hour = hourStartMin; hour < hourStart; hour+= 2) {
@@ -68,21 +61,18 @@ function CalendarDay({calendarDayData}) {
             allData.push({"status": cellStatus, "date": date, "hour": hour})
         }
         for(let hour = hourStop || hourStopMax; hour < hourStopMax; hour+= 2) {
-            console.log("hour", hour)
             let date = calendarHeader["fulldate"]
             let cellStatus="disabled"
             allData.push({"status": cellStatus, "date": date, "hour": hour})
         }
         if((hourStart === null) && (hourStop === null)) {
             for(let hour = hourStartMin; hour < hourStopMax; hour+= 2) {
-                console.log("hour", hour)
                 let date = calendarHeader["fulldate"]
                 let cellStatus="disabled"
                 allData.push({"status": cellStatus, "date": date, "hour": hour})
             }
         }
         setCellsData(allData)
-        console.log("allData", allData)
     }, []);
 
 
