@@ -4,7 +4,8 @@ import '../assets/css/pages/Sitemap.css'
 function Sitemap() {
     return (
         <>
-            Page Sitemap
+            <h1>Plan du site</h1>
+            <p>Et ici, une magnifique liste de liens vers les très nombreuses pages du site.</p>
         </>
     )
 }
