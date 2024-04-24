@@ -2,9 +2,10 @@ import { useState } from 'react'
 import '../assets/css/pages/Sitemap.css'
 
 function Sitemap() {
+    document.title = "Contrôle technique Truckbuster | Plan du site"
     return (
         <>
-            <h1>Plan du site</h1>
+            <h2 className="main_content__title">Plan du site</h2>
             <p>Et ici, une magnifique liste de liens vers les très nombreuses pages du site.</p>
         </>
     )

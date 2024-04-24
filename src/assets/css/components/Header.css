@@ -1,0 +1,14 @@
+h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2em
+}
+h1:first-line {
+    font-weight: 500;
+    font-size: .85em
+
+}
+.main_header__address {
+    font-size: .85em;
+    text-align: right;
+}

@@ -2,9 +2,10 @@ import { useState } from 'react'
 import '../assets/css/pages/LegalNotice.css'
 
 function LegalNotice() {
+    document.title = "Contrôle technique Truckbuster | Mentions légales"
     return (
         <>
-            <h1>Mentions Légales</h1>
+            <h2 className="main_content__title">Mentions Légales</h2>
 
             <h2>Éditeur du Site</h2>
             <p>Ce site est édité par [Nom de l'entreprise], une société enregistrée au registre du commerce et des sociétés sous le numéro [Numéro RCS]. Le siège social est situé à [Adresse], et l'adresse e-mail de contact est [Adresse e-mail].</p>
@@ -30,6 +31,9 @@ function LegalNotice() {
 
             <h2>Droit Applicable</h2>
             <p>Le présent site est soumis au droit français. En cas de litige, les tribunaux français seront seuls compétents.</p>
+
+            <h2>Licences</h2>
+            <p>L'image utilisée en fond de page est sous licence Creatives Commons Attributions. Il s'agit de <a href="https://commons.wikimedia.org/wiki/File:Ghostbusters_Firehouse.jpg">https://commons.wikimedia.org/wiki/File:Ghostbusters_Firehouse.jpg</a> de l'auteur <em>Phillip Ritz from New York, NY, USA</em>.</p>
 
         </>
     )

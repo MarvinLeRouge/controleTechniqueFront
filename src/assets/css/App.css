@@ -1,17 +1,26 @@
 html, body, #root, .app_wrapper {
-    min-height: 100vh
+    min-height: 100vh;
+    color: #fff
 }
 #root {
     display: block;;
     width: 100%;
-    max-width: 80rem;
-    margin: 0 auto;
+    background: rgba(0,0,0,.7)
+}
+body {
+    background: url("../img/bg/firehouse.jpg") #333 50% 50% no-repeat;
+    background-size: cover
 }
 .app_wrapper {
+    max-width: 80rem;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
 }
 .main_content {
     padding: 0 5%
+}
+.main_content__title {
+    font-size: 1.5em;
 }

@@ -2,9 +2,10 @@ import { useState } from 'react'
 import '../assets/css/pages/Cookies.css'
 
 function Cookies() {
+    document.title = "Contrôle technique Truckbuster | Cookies"
     return (
         <>
-            <h1>Mentions Légales - Cookies</h1>
+            <h2 className="main_content__title">Mentions Légales - Cookies</h2>
 
             <p>Conformément à la législation européenne et française en vigueur, nous vous informons que ce site utilise des cookies.</p>
 

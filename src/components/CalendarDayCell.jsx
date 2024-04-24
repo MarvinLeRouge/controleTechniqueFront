@@ -13,12 +13,12 @@ function CalendarDayCell({cellData}) {
             )
         case "full":
             return (
-                <p className="calendar__day__cell full">Créneau saturé</p>
+                <p className="calendar__day__cell full"><span className="calendar__day__content">Créneau saturé</span></p>
             ) 
         case "notFull":
             return (
                 <p className="calendar__day__cell not_full">
-                    <Link className="calendar__day__link" to={"/rdv/" + cellData["date"] + "/" + cellData["hour"]}>Prendre rendez-vous</Link>
+                    <Link className="calendar__day__content calendar__day__link" to={"/rdv/" + cellData["date"] + "/" + cellData["hour"]}>Prendre rendez-vous</Link>
                 </p>
             )
     }

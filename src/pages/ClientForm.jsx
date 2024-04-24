@@ -5,6 +5,7 @@ import { Link } from "react-router-dom"
 import '../assets/css/components/ClientForm.css'
 
 function ClientForm() {
+    document.title = "Contrôle technique Truckbuster | Saisie infos"
     let {rdvDate, rdvHour} = useParams()
     const [formStatus, setFormStatus] = useState(null)
     const [formData, setFormData] = useState({

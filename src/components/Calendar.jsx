@@ -57,19 +57,20 @@ function Calendar({nbJours}) {
     }
 
     return (
-        <div className="calendar">
-            {now}
-            <CalendarDuration nbJours={nbJours} />
-            <div className="calendar__days">
-                {
-                    calendarDaysData.map(function(calendarDayData) {
-                        return (
-                            <CalendarDay calendarDayData={calendarDayData} />
-                        )
-                    })
-                }                
+        <>
+            <div className="calendar">
+                {now}
+                <div className="calendar__days">
+                    {
+                        calendarDaysData.map(function(calendarDayData) {
+                            return (
+                                <CalendarDay calendarDayData={calendarDayData} />
+                            )
+                        })
+                    }                
+                </div>
             </div>
-        </div>
+        </>
     )
 }
 

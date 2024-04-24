@@ -1,7 +1,21 @@
 .main_footer__nav__list {
     list-style: none;
     display: flex;
+    justify-content: center;
     gap: 2em;
     color: #fff;
+    margin-bottom: 2rem;
+    line-height: 2;
 
+}
+.main_footer__nav__link {
+    color: #fff;
+    display: inline-block;
+    padding: .5em 1em;
+}
+.main_footer__nav__link:hover,
+.main_footer__nav__link:focus,
+.main_footer__nav__link.active {
+    color: #fff;
+    text-decoration: underline;
 }
