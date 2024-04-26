@@ -1,9 +1,8 @@
-# React + Vite
+# Truckbuster Front (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ce projet a pour but d'aborder l'ensemble des technologies et des méthodologies utilisées dans un projet d'application full js.
+Ce repo contient le front, qui est déployé sur vercel.
 
-Currently, two official plugins are available:
+- [Maquette Figma](https://www.figma.com/file/oSA9Cn7V2unXkMwQteIuTM/Truckbuster?type=design&node-id=0%3A1&mode=design&t=5XlVyzgyHcCgK5ud-1)
+- [Front sur Vercel](https://controle-technique-front.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# controleTechniqueFront
